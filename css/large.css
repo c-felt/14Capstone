@@ -1,0 +1,15 @@
+@media only screen and (min-width: 60rem) {
+    .hero {
+        width: 20%;
+        display: block;
+        margin: 0 auto;
+    } 
+    .button-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+      }
+      .button-container button {
+        padding: 10px;
+      }
+} /* end media query*/
