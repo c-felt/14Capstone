@@ -1,6 +1,6 @@
 @media only screen and (min-width: 35rem) {
     .hero {
-        width: 60%;
+        width: 70%;
         display: block;
         margin: 0 auto;
     } 
@@ -12,5 +12,7 @@
       .button-container button {
         padding: 5px;
       }
-    
+      section img {
+        width: 70%;
+      }
 } /* end media query*/

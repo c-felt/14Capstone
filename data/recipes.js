@@ -161,5 +161,25 @@ export const recipes = [
           "Warm tortillas according to package directions.",
           "To assemble tacos, place a scoop of beef mixture on each tortilla, then top with desired toppings."
         ]
-      }
+      },
+      {
+        "name": "Pesto Pasta",
+        "prepTime": "15 minutes",
+        "cookTime": "15 minutes",
+        "photo": "pesto2.jpg",
+        "ingredients": [
+            "1 pound spaghetti",
+            "2 cups fresh basil leaves",
+            "3 cloves garlic",
+            "1/3 cup pine nuts",
+            "1/2 cup grated Parmesan cheese",
+            "1/2 cup extra-virgin olive oil",
+            "Salt and pepper to taste"
+        ],
+        "directions": [
+            "Bring a large pot of salted water to a boil. Add the spaghetti and cook until al dente, about 8-10 minutes. Reserve 1 cup of the pasta water, then drain the spaghetti and set aside.",
+            "In a food processor or blender, combine the basil, garlic, pine nuts, and Parmesan cheese. Pulse until coarsely chopped. With the motor running, slowly pour in the olive oil until the pesto is smooth and creamy. Season with salt and pepper to taste.",
+            "In a large pan, heat the pesto over medium heat. Add the reserved pasta water and stir to combine. Add the cooked spaghetti and toss to coat in the pesto. Serve hot, garnished with extra Parmesan cheese and fresh basil leaves, if desired."
+        ]
+    }
 ]

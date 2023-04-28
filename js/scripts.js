@@ -6,6 +6,13 @@ const myNav = document.querySelector('nav')
 const myViewer = document.querySelector('#viewer')
 
 // nav items
+const refreshButton = document.createElement('button');
+refreshButton.textContent = "Home"
+refreshButton.addEventListener('click', () => {
+  location.reload();
+});
+myNav.appendChild(refreshButton)
+
 recipes.forEach(recipe => {
     console.log(recipe)
     const myBtn = document.createElement('button')
@@ -20,7 +27,7 @@ recipes.forEach(recipe => {
     myNav.appendChild(myBtn)
 })
 
-// author blurb name in h2
+// recipe blurb name in h2
 const recipeBlurbName = document.createElement('h2')
 recipeBlurbName.textContent = "Once Upon a Recipe - Who We Are"
 function changeBlurbName() {
@@ -28,7 +35,7 @@ function changeBlurbName() {
 }
 myViewer.appendChild(recipeBlurbName)
 
-// Author Blurb more names and stuff....
+// recipe Blurb more names and stuff....
 const recipeBlurbStuff = document.createElement('h3')
 recipeBlurbStuff.textContent = "Featured in Huffington Post | USA Today Special | Wall Street Journal bestselling cookbook award"
 function changeBlurbStuff() {
@@ -36,7 +43,7 @@ function changeBlurbStuff() {
 }
 myViewer.appendChild(recipeBlurbStuff)
 
-// create author blurb that dissapears on click
+// create recipe blurb that dissapears on click
 const recipeBlurb = document.createElement('p')
 recipeBlurb.innerHTML = "In this space, I am always sharing fresh, flavorful, (mostly) healthy recipes that I love to make and eat in my real, actual, every day life. If I wouldn’t eat it in real life, I won’t put in on the blog. My goal is to inspire you with food that is both approachable AND exciting, whether you’re cooking for yourself, your family, your roommates, or your friends. I want you to be so excited about these recipes that you eagerly await 5pm when you can go home from work and start cooking. <br>I like to create and share recipes that feature real good, real food made for real people. My recipes are fresh, seasonal, mostly simple, often healthy, and sometimes peppered with a little cheese and butter mixed in. I created this little corner of the internet to celebrate life around the table and the good food that bring us all together. <br>  Here in our house, we gravitate towards recipes that are quick, easy, seasonal, (mostly) healthy, and big on flavor. So whether that’s whipping up a quick stir-fry or batch of cozy wild rice soup in the wintertime, blending up some refreshing gazpacho with sangria in the summertime, making our millionth batch of tacos and margs on Tuesdays, or baking up a warm batch of cinnamon rolls and eggs benny for sunny weekend brunches — my heart is never more happy than when my table is filled with good food and good people gathered ’round."
 function changeBlurb() {
@@ -50,7 +57,7 @@ function changeImg() {
     bookHero.className = "hide"
 }
 
-// function show friend
+// function show recipe
 function showBook(recipe) {
     console.log(recipe)
 
@@ -71,6 +78,7 @@ function showBook(recipe) {
 
     let ingredientOpener = document.createElement('p')
     ingredientOpener.innerHTML = "The Ingredients: <br>"
+    ingredientOpener.className = "Instructions"
     recipe.ingredients.forEach(ingredient => {
         console.log(ingredient)
         let theIngredients = document.createElement('li')
@@ -81,7 +89,7 @@ function showBook(recipe) {
 
     let directionsOpener = document.createElement('p')
     directionsOpener.innerHTML = "Directions: <br>"
-
+    directionsOpener.className = "directions"
     recipe.directions.forEach(direction => {
         console.log(direction)
         let Directions = document.createElement('li')
@@ -89,9 +97,7 @@ function showBook(recipe) {
         recipeDirections.appendChild(Directions)
     })
     
-
-
-// Assemble card for each friend
+// Assemble card for each recipe
     recipeSection.appendChild(recipeName)
     recipeSection.appendChild(recipePhoto)
     recipeSection.appendChild(recipePrepTime)
